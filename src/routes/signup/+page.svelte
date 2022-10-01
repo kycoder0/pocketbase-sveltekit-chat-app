@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import pocketbase from '$lib/pocketbase';
 
 	let email = '';
@@ -27,6 +28,7 @@
 					await pocketbase.records.update('profiles', user.profile?.id, {
 						name
 					});
+					goto('/');
 				}
 			}
 		}
