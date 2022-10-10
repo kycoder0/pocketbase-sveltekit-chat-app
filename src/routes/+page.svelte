@@ -2,8 +2,8 @@
 	import type { Record, User } from 'pocketbase';
 	import pocketbase from '$lib/pocketbase';
 	import { afterUpdate, onMount } from 'svelte';
-	import Message from './components/Message.svelte';
-	import LogoutButton from './components/LogoutButton.svelte';
+	import Message from '../components/Message.svelte';
+	import LogoutButton from '../components/LogoutButton.svelte';
 
 	const userId = pocketbase.authStore.model?.id || '';
 	let messages: Record[] = [];
